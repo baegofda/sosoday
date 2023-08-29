@@ -2,6 +2,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { SafeAreaView, StatusBar } from 'react-native';
 import Logo from '../components/Logo';
 import Home from '../screen/Home';
+import LinearGradient from 'react-native-linear-gradient';
 
 const Tab = createBottomTabNavigator();
 
@@ -21,20 +22,32 @@ const Tabs = () => {
         screenOptions={{
           headerStyle: {
             backgroundColor: '#222',
-            height: 70,
+            height: 32,
           },
           headerShadowVisible: false,
           headerTitle() {
             return <Logo />;
           },
           headerTitleAlign: 'center',
-          headerTitleContainerStyle: { marginTop: 'auto' },
           tabBarStyle: {
-            backgroundColor: '#383838',
+            paddingTop: 1,
+            backgroundColor: 'transparent',
             borderTopWidth: 0,
+            height: 56,
           },
+          tabBarItemStyle: { backgroundColor: '#383838' },
           tabBarIconStyle: { display: 'none' },
           tabBarLabelStyle: { color: '#fff' },
+          tabBarBackground() {
+            return (
+              <LinearGradient
+                colors={['#383838', '#FFB93B', '#383838']}
+                start={{ x: 0, y: 0 }}
+                end={{ x: 1, y: 0 }}
+                style={{ flex: 1 }}
+              />
+            );
+          },
         }}>
         <Tab.Screen
           name="Home"
