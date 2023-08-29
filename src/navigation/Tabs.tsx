@@ -18,11 +18,11 @@ const Tabs = () => {
         <StatusBar backgroundColor={'#222'} />
       </SafeAreaView>
       <Tab.Navigator
-        sceneContainerStyle={{ backgroundColor: '#222' }}
+        sceneContainerStyle={{ backgroundColor: '#222', paddingTop: 8 }}
         screenOptions={{
           headerStyle: {
             backgroundColor: '#222',
-            height: 32,
+            height: 26,
           },
           headerShadowVisible: false,
           headerTitle() {
