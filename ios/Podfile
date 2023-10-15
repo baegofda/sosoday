@@ -45,6 +45,9 @@ target 'sosoday' do
     :app_path => "#{Pod::Config.instance.installation_root}/.."
   )
 
+  # Splash
+  pod 'RNBootSplash', :path => '../node_modules/react-native-bootsplash'
+
   target 'sosodayTests' do
     inherit! :complete
     # Pods for testing
