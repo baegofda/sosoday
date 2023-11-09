@@ -1,12 +1,10 @@
-import { SafeAreaView, Text, View } from 'react-native';
+import { Text, View } from 'react-native';
 
 const Diary = () => {
   return (
-    <SafeAreaView>
-      <View>
-        <Text>Diary</Text>
-      </View>
-    </SafeAreaView>
+    <View>
+      <Text>Diary</Text>
+    </View>
   );
 };
 
